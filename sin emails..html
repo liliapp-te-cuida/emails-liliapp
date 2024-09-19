@@ -1,0 +1,61 @@
+<!--estos no tienen correo, ni en liliapp ni en DH-->
+
+<!--Invitacion a grupo familiar-->
+<h1>¡Te han invitado a un grupo familiar!</h1>
+<p>
+  ${data.userFrom.name} ${data.userFrom.lastname} te ha invitado a formar parte
+  de su grupo familiar.
+</p>
+<p>Para unirte, simplemente haz clic en el siguiente enlace:</p>
+<a href="${link}">Unirse al grupo familiar</a>
+<p>Si el enlace no funciona, copia y pega la siguiente URL en tu navegador:</p>
+<p>${link}</p>
+
+
+<!--inicio de tratamiento, avisado a doctor, esto ya esta hecho en notificaciones y lo ve el asistente o doctor, este email le llegaria al doc, revisar si es viales implementarlo no.-->
+<h1>Inicio de Tratamiento</h1>
+<p>Hola Dr. ${data.follow.doctor_name},</p>
+<p>Queremos informarte que tu paciente ${data.follow.child_name} ha iniciado un nuevo tratamiento. A continuación, te proporcionamos algunos detalles:</p>
+<ul>
+  <li><b>Paciente:</b> ${data.follow.child_name}</li>
+  <li><b>Fecha de Inicio:</b> ${data.treatment.start_date}</li>
+  <li><b>Fecha de Finalización:</b> ${data.treatment.end_date}</li>
+</ul>
+<p>Mantente informado sobre el progreso de tu paciente y ajusta su plan de tratamiento según sea necesario.</p>
+<p>Si tienes alguna pregunta o necesitas más detalles, estamos aquí para ayudarte.</p>
+<p>¡Gracias por tu dedicación!</p>
+
+<!--reaccion alergica,avisado a doctor, esto ya esta hecho en notificaciones y lo ve el asistente o doctor, este email le llegaria al doc, revisar si es viales implementarlo no.-->
+<h1>Alerta de Reacción Alérgica</h1>
+<p>Hola Dr. ${data.follow.doctor_name},</p>
+<p>Este correo es para informarte que se ha detectado una reacción alérgica en tu paciente ${data.follow.child_name}. Por favor, revisa la situación y toma las medidas necesarias.</p>
+<p>Detalles de la Reacción:</p>
+<ul>
+  <li><b>Paciente:</b> ${data.follow.child_name}</li>
+</ul>
+  <p><b>Mensaje:</b> ${data.follow.notification_message}</p>
+<p>Si necesitas más información o asistencia, no dudes en ponerte en contacto con nosotros.</p>
+<p>¡Gracias por tu atención!</p>
+
+<!--exame subido, avisado a doctor, esto ya esta hecho en notificaciones y lo ve el asistente o doctor, este email le llegaria al doc, revisar si es viales implementarlo no.-->
+<h1>Nuevo Examen Cargado</h1>
+<p>Hola Dr. ${data.follow.doctor_name},</p>
+<p>Te informamos que se ha cargado un nuevo examen para revisión del paciente ${data.follow.child_name}.</p>
+<p>Detalles del Examen:</p>
+<ul>
+  <li><b>Paciente:</b> ${data.follow.child_name}</li>
+  <li><b>Fecha de Carga:</b> ${new Date().toLocaleString()}</li>
+</ul>
+<p>Por favor, accede a la plataforma para revisar los detalles del examen y tomar las acciones necesarias.</p>
+<p>Si necesitas más información o asistencia, no dudes en ponerte en contacto con nosotros.</p>
+<p>¡Gracias por tu atención!</p>
+
+<!--enviado a doctor, despues de validacion-->
+<h1>¡Bienvenido a Liliapp!</h1>
+  <p>Estimado/a Dr. ${data.name} ${data.lastname},</p>
+  <p>Le informamos con gusto que su solicitud de acceso a Liliapp ha sido revisada y <b>aprobada</b>.</p>
+  <p>A partir de este momento, tiene acceso completo a Liliapp para revisar y gestionar a sus pacientes de manera efectiva.</p>
+  <p>No dude en explorar todas las funcionalidades que Liliapp tiene para ofrecer.</p>
+  <p>¡Gracias por unirse a nuestra plataforma!</p>
+  </br>
+  <p>Para acceder a todas las funcionalidades, <a href="https://liliapp-doctor.vercel.app/signin">Inicie sesión</a></p>
